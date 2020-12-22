@@ -1,0 +1,68 @@
+#borderPane{
+	-fx-background-color: white;
+}
+
+#topPane{
+	-fx-background-color: rgb(169,169,169);
+}
+
+.jfx-hamburger StackPane{
+    -fx-background-color : white;
+    -fx-pref-width: 36px;
+    -fx-pref-height: 4px;
+    
+} 
+.jfx-hamburger{
+	-fx-spacing: 4.5pt;
+}
+
+#drawerVbox{
+	-fx-background-color: rgb(169,169,169);
+}
+#drawerVbox JFXButton{
+	-fx-alignment: center-left;
+}
+.jfx-button .jfx-rippler{
+	-jfx-rippler-radius : 70pt;	
+}
+#drawerVbox JFXButton:hover{
+	-fx-background-color:rgb(218,165,32);
+}
+
+#vbox{
+	-fx-background-color: rgb(169,169,169);
+}
+
+
+#t_search{
+	-fx-background-color:white;
+	-fx-text-fill: rgb(218,165,32);
+	-fx-padding: 4pt 4pt 4pt 4pt;
+}
+
+#c_searchBy{
+	-fx-background-color: white;
+}
+
+
+.menu-item{
+	-fx-cursor: hand ;
+	-fx-background-color: #DAA520;
+	
+}
+.menu-item .label{
+	-fx-font-size: 12pt ;
+	-fx-font-weight: bold;
+	-fx-padding: 10 20;
+	-fx-text-fill: white;	
+}
+.menu-item:hover{
+	-fx-background-color: #DAA520;
+}
+
+
+
+
+
+
+

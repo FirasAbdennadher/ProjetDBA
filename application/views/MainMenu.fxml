@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@forAll.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainMenu">
+   <left>
+      <AnchorPane fx:id="leftAnchorPane" minWidth="57.0" prefHeight="545.0" prefWidth="216.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <TextField fx:id="log_txt" prefHeight="25.0" prefWidth="58.0" visible="false" />
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="216.0" layoutX="57.0" minWidth="1.0" overLayVisible="false" prefHeight="545.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="drawerVbox" minWidth="20.0" prefHeight="200.0" prefWidth="159.0">
+                     <children>
+                        <JFXTreeView fx:id="treeviewJX1" prefHeight="700.0" prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </JFXDrawer>
+            <VBox fx:id="vbox" prefHeight="543.0" prefWidth="57.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                 
+               </children>
+            </VBox>
+            <TextField fx:id="pw_txt" prefHeight="25.0" prefWidth="57.0" visible="false" />
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <GridPane fx:id="topPane" maxWidth="1.7976931348623157E308" minWidth="50.0" prefHeight="45.0" prefWidth="770.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="377.0" minWidth="57.0" prefWidth="57.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="50.0" prefWidth="426.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="-Infinity" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="45.0" prefWidth="45.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="42.0" prefWidth="45.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="50.0" minWidth="42.0" prefWidth="45.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar maxWidth="45.0" prefHeight="43.0" prefWidth="33.0" style="-fx-background-color: tr;" GridPane.columnIndex="5">
+              <menus>
+                <Menu fx:id="menu_logout" mnemonicParsing="false">
+                  <items>
+                    <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#logout_Click" text="Logout" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                  </items>
+                     <graphic>
+                        <ImageView fx:id="logout_icon" fitHeight="35.0" fitWidth="35.0" onMouseClicked="#search_icon_Click" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../res/logout-icon.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuBar>
+            <JFXHamburger fx:id="hamburger" alignment="CENTER" minWidth="57.0" prefHeight="42.0" prefWidth="45.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXHamburger>
+            <Label fx:id="title" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="40.0" text="Version simplifiée 'Oracle SQL Developer" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS">
+               <font>
+                  <Font name="Century Schoolbook" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="search_icon" fitHeight="35.0" fitWidth="41.0" onMouseClicked="#search_icon_Click" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@Google%20Web%20Search_96px.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXButton fx:id="rela" onAction="#modeleRela" prefHeight="45.0" prefWidth="157.0" ripplerFill="WHITE" style="-fx-background-color: #FFFFFF;" text="Modéle Relationelle" textFill="#171717" GridPane.columnIndex="2" GridPane.columnSpan="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

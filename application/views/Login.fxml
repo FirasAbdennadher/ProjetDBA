@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="765.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Login">
+   <children>
+      <StackPane layoutX="81.0" layoutY="62.0" prefHeight="468.0" prefWidth="604.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="62.0">
+         <children>
+            <Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="364.0" prefWidth="380.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="login" focusColor="#90826f" labelFloat="true" layoutX="70.0" layoutY="46.0" prefHeight="42.0" prefWidth="248.0" promptText="Username" unFocusColor="#90826f">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#90826f" labelFloat="true" layoutX="70.0" layoutY="156.0" prefHeight="42.0" prefWidth="248.0" promptText="Password" unFocusColor="#90826f">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="b_login" buttonType="RAISED" defaultButton="true" layoutX="90.0" layoutY="262.0" onAction="#loginHandle" prefHeight="63.0" prefWidth="201.0" ripplerFill="WHITE" style="-fx-background-color: #DAA520;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font name="SansSerif Bold" size="22.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="label" layoutX="67.0" layoutY="216.0" prefHeight="17.0" prefWidth="280.0" style="-fx-text-fill: red;" />
+               </children>
+               <effect>
+                  <DropShadow height="42.0" radius="20.5" width="42.0" />
+               </effect>
+            </Pane>
+         </children>
+      </StackPane>
+      <ImageView fx:id="power" fitHeight="79.0" fitWidth="85.0" layoutX="688.0" layoutY="526.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="15.0">
+         <image>
+            <Image url="@../../res/oracle.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

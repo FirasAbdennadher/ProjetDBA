@@ -1,0 +1,19 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#splash {
+	-fx-background-image: url("../../res/bg2.jpg") ;
+	-fx-background-size: stretch ;
+}
+#loginPage { 
+	-fx-background-image: url("../../res/bg2.jpg") ; 
+	-fx-background-size: stretch ;
+}
+#btnlog {
+  -fx-background-image: url("../../res/logout-icon.png");
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+  -fx-background-size: stretch ;
+  
+}
+
+

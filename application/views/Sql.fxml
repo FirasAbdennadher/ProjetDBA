@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bd1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="580.0" prefWidth="781.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Sql">
+   <top>
+      <GridPane maxWidth="1.7976931348623157E308" prefHeight="68.0" prefWidth="781.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="386.0" minWidth="94.0" prefWidth="94.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="386.0" minWidth="94.0" prefWidth="144.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="590.0" minWidth="100.0" prefWidth="373.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="150.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="150.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="150.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="label" prefHeight="46.0" prefWidth="372.0" text="Execution Requette SQL" textAlignment="CENTER" textFill="GOLDENROD" GridPane.columnIndex="2" GridPane.columnSpan="4" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtsql" labelFloat="true" promptText="select * from table" unFocusColor="#12c3eb" GridPane.columnSpan="5" GridPane.rowIndex="1">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fx:id="img" fitHeight="49.0" fitWidth="79.0" onMouseClicked="#tester" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowSpan="2" />
+            <TextField fx:id="logsql" visible="false" />
+            <TextField fx:id="pw_sql" visible="false" />
+            <Label fx:id="labelsql" prefHeight="17.0" prefWidth="191.0" style="-fx-text-fill: red;" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </GridPane>
+   </top>
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <StackPane>
+               <children>
+                  <TabPane fx:id="tab11" prefHeight="507.0" prefWidth="172.0" tabClosingPolicy="UNAVAILABLE" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
